@@ -1,0 +1,284 @@
+/* --- ESTILOS GERAIS DO SITE --- */
+:root {
+    --primary: palevioletred;
+    --dark: #0a0a0a;
+    --accent: #00ffca;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-color: black;
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--dark); 
+    color: white; 
+    margin: 0; 
+    overflow-x: hidden;
+}
+
+
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+h2{
+    font-size: 2rem;
+}
+
+p {
+    color: rgb(11, 226, 190);
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* --- BOTÕES E ELEMENTOS GERAIS --- */
+.cta-button {
+    background-color: rgb(18, 233, 10);
+    color: white;
+    border: none;   
+    padding: 12px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+
+}
+
+.breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.breadcrumb-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item a {
+    color: white; /* palevioletred */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.breadcrumb-item::after {
+    content: "\f105"; /* Ícone de seta do FontAwesome */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin: 0 12px;
+    font-size: 0.7rem;
+    color: #444;
+}
+
+.breadcrumb-item:last-child::after {
+    display: none; /* Remove a seta do último item */
+}
+
+.breadcrumb-item.active {
+    color: palevioletred;
+    pointer-events: none;
+}
+
+.hero-section {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column;
+}
+
+.hero-text {
+    margin: 60px auto 0 auto;
+    text-align: center;   
+}
+
+#titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.hero-images {
+    width: 500px;
+    height: 500px;
+    margin: 40px 0;
+}
+
+.hero-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- NOVO SELETOR DE QUANTIDADE (BOTÕES + E -) --- */
+.preco-quantidade-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+#preco-total {
+    color: yellow;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.seletor-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.seletor-quantidade label {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+}
+
+.controle-qtd {
+    display: flex;
+    align-items: center;
+    background: #2c2c2c;
+    border-radius: 8px;
+    border: 1px solid palevioletred;
+    overflow: hidden;
+}
+
+.btn-qtd {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-qtd:hover { background: rgba(219, 112, 147, 0.2); }
+
+.controle-qtd input {
+    width: 40px;
+    text-align: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: none; /* Evita abrir teclado no celular */
+}
+
+/* Remove setas padrão */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+ .titulo-loja {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(to right, #fff, #ffb6c1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+/* --- WHATSAPP E FOOTER --- */
+.whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.whatsapp a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* --- PREÇO RISCADO --- */
+#preco-riscado-container { text-align: center; }
+#preco-riscado { color: #999; text-decoration: line-through; font-size: 1.2rem; }
+#texto-por { color: rgb(11, 226, 190); font-size: 1.1rem; }
+
+
+/* --- RESPONSIVIDADE FINAL (CELULARES) --- */
+@media (max-width: 768px) {
+    
+    .container-topo { flex-direction: column; gap: 10px; }
+    h1 { font-size: 3rem; font-weight: 800;}
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1.2rem; }
+
+    .hero-text { margin: 0 20px; }
+    .hero-images { width: 300px; height: 300px; }
+    
+    .hero-section { min-height: auto; }
+    .preco-quantidade-container { flex-direction: column; gap: 10px; margin-bottom: 60px; }
+    
+    .whatsapp { right: 20px; bottom: 20px; }
+    .formspree-form { width: 90%; padding: 20px; }
+
+    .mobile {
+        margin: 60px auto;
+       
+    }
+}
+
+ /* FOOTER */
+        footer {
+            height: 50px;
+            font-size: 0.7rem;
+            padding: 5px 20px;
+            text-align: center;
+            background: linear-gradient(0deg, rgba(219, 112, 147, 0.05) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        .btn-footer-cta {
+            display: inline-flex;
+            align-items: center;
+            font-size: medium;
+            gap: 5px;
+            padding: 5px 20px 5px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-footer-cta:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }

@@ -1,0 +1,74 @@
+/* Estilos específicos para a página de finalização de compra */
+.pix-container {
+    background-color: #1a1a1a; 
+    padding: 30px;
+    border-radius: 15px;
+    border: 3px solid rgb(95, 71, 84); /* Bordas roxas */
+    box-shadow: 0 0 20px rgba(95, 71, 84, 0.7); /* Sombra roxa para destaque */
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Botão de ação via WhatsApp */
+#confirmar-button {
+    background-color: #25d366; /* Verde do WhatsApp */
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    width: 100%;
+}
+
+#confirmar-button:hover {
+    background-color: #128c7e;
+}
+
+/* Estilo para o link "Voltar à página inicial" */
+#link-voltar {
+    
+    padding: 20px 0 0 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#link-voltar a {
+    color: white; 
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+#link-voltar a:hover {
+    color: rgb(11, 226, 190);
+}
+
+#link-voltar i {
+    color: rgb(95, 71, 84);
+    margin-right: 8px;
+}
+
+/* --- CONFIGURAÇÕES RESPONSIVAS --- */
+@media (max-width: 480px) {
+    .pix-container {
+        width: 85%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem !important;
+    }
+
+    #confirmar-button {
+        font-size: 0.9rem;
+        padding: 15px 10px;
+    }
+}

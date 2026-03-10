@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loja Oficial | Dani Comércio Digital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/geral.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/eefa58006c.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        :root {
+
+            --primary: palevioletred;
+
+            --dark: #0a0a0a;
+
+            --accent: #00ffca;
+
+            --header-grad: linear-gradient(135deg, #000000 0%, #25101a 100%);
+
+            --esgotado: #ff4757;
+
+            --novidade: #f8c304;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Inter', sans-serif;
+
+            background-color: var(--dark);
+
+            color: white;
+
+            margin: 0;
+
+        }
+
+
+
+        .header-loja {
+
+            background: var(--header-grad);
+
+            padding: 20px 30px;
+
+            border-bottom: 2px solid var(--primary);
+
+            text-align: center;
+
+        }
+
+
+
+        /* --- GRID DE PRODUTOS --- */
+
+        .container-produtos {
+
+            max-width: 1200px;
+
+            margin: 50px auto;
+
+            padding: 0 20px;
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+            gap: 30px;
+
+        }
+
+
+
+        .produto-item {
+
+            background: #111;
+
+            border: 1px solid rgba(219, 112, 147, 0.1);
+
+            border-radius: 20px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            transition: 0.4s;
+
+            text-decoration: none;
+
+            color: white;
+
+            position: relative;
+
+        }
+
+
+
+        .produto-item:hover {
+
+            transform: translateY(-10px);
+
+            border-color: var(--primary);
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+        }
+
+
+
+        .produto-item img {
+
+            width: 100%;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .produto-item h3 {
+
+            font-size: 1.2rem;
+
+            margin: 10px 0 5px;
+
+        }
+
+
+
+        .produto-item p {
+
+            color: #888;
+
+            font-size: 0.9rem;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .preco-tag {
+
+            font-size: 1.4rem;
+
+            color: yellow;
+
+            font-weight: bold;
+
+            display: block;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .btn-ver-mais {
+
+            background: var(--primary);
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+            font-size: 0.9rem;
+
+            display: inline-block;
+
+            transition: 0.3s;
+
+        }
+
+
+
+        /* ETIQUETAS */
+
+        .tag-destaque {
+
+            position: absolute;
+
+            top: 30px;
+
+            right: 30px;
+
+            background: var(--accent);
+
+            color: #000;
+
+            padding: 4px 12px;
+
+            font-weight: 800;
+
+            font-size: 0.7rem;
+
+            border-radius: 5px;
+
+        }
+
+        .tag-novidade {
+
+            position: absolute;
+
+            top: 30px;
+
+            right: 30px;
+
+            background: var(--novidade);
+
+            color: var(--dark);
+
+            padding: 4px 12px;
+
+            font-weight: 800;
+
+            font-size: 0.7rem;
+
+            border-radius: 5px;
+
+        }
+
+
+
+        .tag-esgotado {
+
+            position: absolute;
+
+            top: 30px;
+
+            right: 30px;
+
+            background: var(--esgotado);
+
+            color: white;
+
+            padding: 4px 12px;
+
+            font-weight: 800;
+
+            font-size: 0.7rem;
+
+            border-radius: 5px;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+        }
+
+
+
+        footer {
+
+            padding: 60px 20px;
+
+            text-align: center;
+
+            color: #555;
+
+            font-size: 0.8rem;
+
+            border-top: 1px solid rgba(255,255,255,0.05);
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <header class="header-loja">
+
+        <h1 class="titulo-loja">Loja da Dani</h1>
+
+    </header>
+
+    <nav class="breadcrumb-container">
+
+        <ul class="breadcrumb-list">
+
+            <li class="breadcrumb-item" style="color: palevioletred;">Loja</li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <main class="container-produtos">
+
+       
+
+        <a href="melu.html" class="produto-item">
+
+            <div class="tag-destaque">MAIS VENDIDO</div>
+
+            <img src="assets/images/gloss-melu.jpeg" alt="Lip Oil Melu">
+
+            <h3>Lip Oil Melu</h3>
+
+            <p>Néctar do Paraíso - Ruby Rose</p>
+
+            <span class="preco-tag">R$ 31,92</span>
+
+            <span class="btn-ver-mais">VER DETALHES</span>
+
+        </a>
+
+
+
+        <div class="produto-item">
+
+            <div class="tag-esgotado">ESGOTADO</div>
+
+            <img src="assets/images/morango.jpg" alt="Brilho Labial Moranguinho">
+
+            <h3>Brilho Labial Moranguinho</h3>
+
+            <p>Hidratação e Brilho</p>
+
+            <span class="preco-tag">R$ 19,90</span>
+
+            <span class="btn-ver-mais">EM BREVE</span>
+
+        </div>
+
+
+
+        <div class="produto-item">
+
+            <div class="tag-novidade">NOVIDADE</div>
+
+            <img src="assets/images/depilador-1.jpeg" alt="Depil Roll">
+
+            <h3>Depilador Indolor Cristal Mágico</h3>
+
+            <p>Pedra Depiladora. Design Clean e Elegante</p>
+
+            <span class="preco-tag">R$ 35,90</span>
+
+            <span class="btn-ver-mais">EM BREVE</span>
+
+        </div>
+
+
+
+        <div class="produto-item">
+
+            <div class="tag-esgotado">ESGOTADO</div>
+
+            <img src="assets/images/iluminador.jpg" alt="Paleta Soft">
+
+            <h3>Iluminador</h3>
+
+            <p>Glow Stick Mariana Saad 6g</p>
+
+            <span class="preco-tag">R$ 49,90</span>
+
+            <span class="btn-ver-mais">EM BREVE</span>
+
+        </div>
+
+    </main>
+    <div class="whatsapp">
+        <a href="https://wa.me/5544984319805" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div> 
+
+    <footer>
+        <p style="color: #666;">&copy; 2026 Dani Guimarães. High-end E-commerce Experience.</p>
+        <a href="https://wa.me/5544984319805" class="btn-footer-cta">
+            Quero uma página profissional igual a esta ❤️ <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </footer>
+</body>
+
+</html>
